@@ -103,13 +103,13 @@ def aimassist():
 
 def aimlock_grab():
 	with mss.mss() as sct:
-		box = (950, 530, 990, 570) # box of 20x20 pixel around the crosshair
+		box = (1270, 710, 1310, 750) # box of 20x20 pixel around the crosshair
 		img = sct.grab(box)
 		return PIL.Image.frombytes('RGB',img.size,img.bgra,'raw','BGRX')
 
 def grab():
 	with mss.mss() as sct:
-		box = (950, 530, 970, 550) # box of 20x20 pixel around the crosshair
+		box = (1270, 710, 1290, 730) # box of 20x20 pixel around the crosshair
 		img = sct.grab(box)
 		return PIL.Image.frombytes('RGB',img.size,img.bgra,'raw','BGRX')
 
